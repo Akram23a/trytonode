@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Bataille Navale | Inscription</title>
+  </head>
+  <body>
+
+
+        <!-- debut header -->
+        <header class="container-fluid header">
+            <div class="container">
+              <a href="#" class="mx-auto my-0 text-uppercase logo">Battleships</a>
+              <div class=" menu">
+      
+                  <a href="index.html">Acceuil</a>
+                  <a href="login.html">Se connecter</a>
+                  <a href="register.html">S'inscrire</a>
+                </div>
+      
+            </div>
+      
+          </header>
+          <!-- fin header -->
+      
+    <!-- Inscription -->
+    <section class="container-fluid inscr" id="inscr">
+
+    <form class="inscription container" id="ins" action="/register1" method="post">
+      <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+
+      <h2> Vous êtes nouveau?</h1> <h6> Merci de renseigner vos informations </h6>
+
+      </div>
+      </div>
+<br>
+      <div class="row">
+        <div class="col-md-offset-4 col-md-6">
+        <div class="form-group">
+        <label for="Prenom">Prénom</label>
+        <input type="text" class="form-control" name="fname" placeholder="Prénom" required>
+        </div>
+        </div>
+
+      <div class="col-md-offset-4 col-md-6">
+      <div class="form-group">
+      <label for="Nom">Nom</label>
+      <input type="text" class="form-control" name="lname" placeholder="Nom" required>
+      </div>
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="col-md-offset-4 col-md-6">
+        <div class="form-group">
+
+      <label for="Email">Adresse mail</label>
+      <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+    </div></div>
+      </div>
+
+
+      <div class="row">
+      <div class="col-md-offset-4 col-md-6">
+      <div class="form-group">
+      <label for="Password">Mot de passe</label>
+      <input type="password" class="form-control" id="password" placeholder="Mot de passe" name="password" required>
+      </div>
+      </div>
+      <div class="col-md-offset-4 col-md-6">
+      <div class="form-group">
+      <label for="vPassword">Vérification du mot de passe</label>
+      <input type="password" class="form-control" id="vpassword" placeholder="Vérification mot de passe" name="vpassword" required>
+      </div>
+      </div>
+      </div>
+
+      <br/>
+      <div class="row">
+      <div class="col-md-offset-1 col-md-12">
+      <button type="submit" class="btn btn-primary" form="ins" id="submit">Envoyer mes informations</button>
+      </div>
+      </div>
+
+    </form>
+
+    </section>
+    <!-- fin Inscription -->
+
+    <!-- Footer -->
+    <footer>
+      UVSQ - AWS - Groupe 10
+    </footer>
+    <script type="text/javascript" src="client.js"></script>
+
+  </body>
+</html>

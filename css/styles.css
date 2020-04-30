@@ -1,0 +1,589 @@
+/* @@charset "UTF-8"; */
+
+/* ***************************** la page d'Index  ******************/
+/* 
+body,html{
+  padding: 0;
+  margin: 0;
+  background-image: url("../img/bs2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+} */
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+a,a:hover{
+  text-decoration: none;
+}
+
+/* header */
+.header{
+  height: 70px;
+  line-height: 70px;
+  background: black;
+  position: fixed;
+  opacity: 1;
+  border-bottom: white;
+  border-bottom: solid;
+
+}
+.header a:hover {
+  text-decoration: none;
+}
+
+
+/* LOGO */
+.logo{
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* fin LOGO */
+
+/* Menu */
+.menu{
+  float: right;
+}
+.menu a{
+  color: white;
+  margin-right: 20px;
+}
+.menu a:hover{
+  text-decoration: none;
+  color: blue;
+}
+/* fin Menu */
+.cookies{
+  height: 50px;
+  margin-bottom: -10px;
+}
+/* Banner */
+.inner-ban{
+  background-color: black;
+  opacity: 0.8;
+  padding-top: 50px;
+
+}
+
+.banniere a{
+  color: white;
+}
+
+.inner-ban button{
+  margin-top: 30px;
+height: 50px;
+width: 300px;
+}
+.inner-ban button:hover{
+background-color: #3e8e41;
+border-color: #27ae60;
+}
+.inner-ban button:active{
+background-color: green;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+.banniere{
+  width: 100%;
+  max-width: 100%;
+  height: 800px;
+  text-align: center;
+
+}
+.ban{
+  width: 100%;
+  max-width: 100%;
+
+}
+.ban img{
+  width: 100%;
+  max-width: 100%;
+height: 900px;
+}
+.inner-ban{
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 0;
+  text-align: center;
+  padding-bottom: 140px;
+  color: white;
+  text-shadow: 1px 1px 20px #FFFFFF;
+  font-size: 30px;
+}
+/*fin Banner */
+
+/* inscription  */
+.inscr{
+height: 800px;
+width: 100%;
+padding: 50px;
+background-size: 100%;
+padding-top: 130px;
+}
+
+.inscription{
+  
+  background-color: white;
+  padding: 5%;
+  position: center;
+  border-radius: 40px;
+  opacity: 0.85;
+}
+
+/* fin inscription */
+
+/* Formulaires */
+.form-control input{
+  border-radius: 40px;
+  text-align: center;
+  margin: 5%;
+}
+/* fin Formulaires */
+
+
+/* Login */
+
+.login{
+
+background-size: 100%;
+
+}
+.login-popup-wrap{
+
+height: 800px;
+width: 100%;
+border: 2px;
+/* border-color: #638118; */
+text-align: center;
+padding-top:20%;
+}
+
+.login a{
+  color: white;
+}
+.login button{
+  margin-bottom: 20px;
+}
+.login-popup-heading{
+  color: black;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.login form{
+  border:5px;
+  border-radius: 40;
+  border-color: #638118;
+
+}
+.login2{
+
+  background-color: white;
+
+  width: 500px;
+  background-color: white;
+  padding-top: 20px;
+  border-radius: 40px;
+  opacity: 0.8;
+}
+/* fin Login */
+
+label{
+  margin-bottom: 10px;
+}
+
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top:70px; /* Stay at the top */
+  left: 0;
+  background-color: black; /* Black */
+  opacity: 0.85;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+.friend{
+  height: 70px;
+
+}
+.friend a:hover{
+  background-color: #666;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* ***************************** Fin de la page Index  ******************/
+
+.HostContainer{
+  height: 700px;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 30px;
+  color: white;
+  margin-left: 210px;
+  margin-top: 80px;
+
+ position: absolute;
+}
+
+/* Game */
+.caseBataille{
+  width:40px;
+  height:35px;
+  text-align:center;
+  border-color: teal;
+}
+.userTable{
+  border:2px;
+
+}
+.userSide{
+  background-color: whitesmoke;
+}
+.ennemySide{
+  background-color: teal;
+}
+/* Footer */
+footer{
+  text-align: center;
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  bottom: 100px;
+}
+/* fin Footer*/
+
+/* ROOMS */
+.rooms-container{
+  width: 60%;
+}
+.rooms-header{
+  padding-top: auto;
+  padding-bottom: auto;
+  height: 20%;
+  padding-top: 2.5%;
+  padding-right: 40px;
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+  border-bottom: solid;
+}
+.room{
+  height: 30px;
+  border-width: thick;
+  padding-left: 10px;
+}
+/* Friends */
+.friends-header{
+  padding-top: auto;
+  padding-bottom: auto;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  color: white;
+  border-bottom: white;
+  border-bottom: solid;
+}
+
+/* Chat styles */
+
+   #message-container {
+      width: 20%;
+      /* max-width: 1200px; */
+    }
+/* 
+    #message-container div {
+      background-color: #CCC;
+      padding: 5px;
+    }
+    #message-container div:nth-child(2n) {
+      background-color: #FFF;
+    }
+    #send-container {
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+    #message-input {
+      flex-grow: 1;
+    } */
+
+
+
+    .footer {
+      background-color: gray;
+      color: white;
+      height: 17px;
+      font-family: fantasy;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      }
+
+
+ body{
+  padding: 0;
+  margin: 0;
+  background-image: url("../img/bs2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* header */
+header{
+  height: 70px;
+  line-height: 70px;
+  background: black;
+  position: absolute;
+  opacity: 1;
+  border-bottom: white;
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+
+}
+.header a:hover {
+  text-decoration: none;
+}
+
+
+/* LOGO */
+.logo{
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* fin LOGO */
+
+/* Menu */
+.menu{
+  float: right;
+}
+.menu a{
+  color: white;
+  margin-right: 20px;
+}
+.menu a:hover{
+  text-decoration: none;
+  color: cadetblue;
+}
+/* fin Menu */
+
+/* SIDE NAVE */
+
+.sidenav {
+  height: 89.5%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top:70px; /* Stay at the top */
+  left: 0;
+  background-color: black; /* Black */
+  opacity: 0.85;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 120px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: absolute;
+}
+label{
+  width: 100%;
+  height: 30px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+/* .vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+} */
+.host{
+  background-color: white;
+  right: 0;
+  top: 80px;
+  height: 700px;
+  opacity: 0.8;
+  border-radius: 20px;
+
+  /* width: 800px; */
+}
+/* .host::after {
+  content: "";
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+} */
+
+
+/* Waiting room */
+#waiting-room{
+margin: auto;
+background-color: black;
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+height: 150px;
+padding-top:30px;
+border-radius: 30px;
+}
+
+
+
+
+/*CSS généré automatiquement pour tester ( https://html-css-js.com/css/generator/ ), à mettre à jour*/
+@media (min-width: 1200px) {
+  .container {
+      width: 970px;
+      height: 575px;
+  }
+}
+.container {
+  display: table;
+  vertical-align: middle;
+}
+.vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h3 {
+  margin-top: 5px;
+}
+
+.panel, .panel-heading {
+  border-radius: 0px;
+  border-color: #333;
+}
+
+.panel, .panel-body {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.panel-primary > .panel-heading, .btn-primary, .btn-primary:active, .btn-primary:focus {
+  border-radius: 0px;
+  background-color: #333;
+  border-color: #333;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+  border-color: #333;
+}
+
+#messages-list {
+  height: 95px;
+  overflow-y: scroll;
+  margin-top: 5px;
+}
+
+#messages {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#messages li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.list-group-item:first-child, .list-group-item:last-child, .form-control {
+  border-radius: 0px;
+}
+
+.list-group-item {
+  border-color: #ccc;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+#turn-status {
+  padding: 10px 0px;
+  margin: 25px 0 0 0;
+}
+
+#turn-status a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.alert-your-turn {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert-opponent-turn {
+  color: #767676;
+  background-color: #f0f0f0;
+  border-color: #e9e9e9;
+}
+
+.alert-winner {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-loser {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
