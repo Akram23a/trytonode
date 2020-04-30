@@ -62,7 +62,7 @@ app.get('/disconnect', function(request, response) {
   response.sendFile(__dirname + '/index.html');
 });
 
-app.get('/register1', function(request, response) {
+app.get('/register', function(request, response) {
   response.sendFile(__dirname +'/register.html');
 });
 app.post('/login', function(request, response, socket) {
