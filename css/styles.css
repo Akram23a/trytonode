@@ -199,16 +199,17 @@ padding-top:20%;
   border-color: #638118;
 
 } */
-/* .login2{
+.login2{
 
   background-color: white;
-
-  width: 500px;
+  margin:auto;
+  width: 600px;
   background-color: white;
-  padding-top: 20px;
+  padding: 40px;
   border-radius: 40px;
   opacity: 0.8;
-} */
+  height: auto;
+}
 /* fin Login */
 
 label{
@@ -478,11 +479,33 @@ label{
   z-index: -1;   
 } */
 
+/* disonnect announce */
+#disconnected{
+margin-top: 100px;
+background-color: black;
+margin-left: 100px;
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+height: 150px;
+padding-top:30px;
+border-radius: 30px;
 
+}
+
+
+.discButton{
+  border-radius: 30px;
+  background-color: #a94442;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding:auto;
+  height: 70px;
+}
 /* Waiting room */
 #waiting-room{
-margin: auto;
+margin-top: 100px;
 background-color: black;
+margin-left: 100px;
 color: white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 height: 150px;
