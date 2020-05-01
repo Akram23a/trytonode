@@ -143,6 +143,16 @@ padding-top: 130px;
   opacity: 0.85;
 }
 
+.bouton{
+  display:block;
+  width:150px;
+  line-height:50px;
+  text-align:center;
+  display:inline;
+  background:url(images/bouton-noir.png) no-repeat;
+  color:white;
+  text-decoration:none;
+  }
 /* fin inscription */
 
 /* Formulaires */
@@ -183,13 +193,13 @@ padding-top:20%;
   margin-bottom: 30px;
 }
 
-.login form{
+/* .login form{
   border:5px;
   border-radius: 40;
   border-color: #638118;
 
-}
-.login2{
+} */
+/* .login2{
 
   background-color: white;
 
@@ -198,7 +208,7 @@ padding-top:20%;
   padding-top: 20px;
   border-radius: 40px;
   opacity: 0.8;
-}
+} */
 /* fin Login */
 
 label{

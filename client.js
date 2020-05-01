@@ -1,4 +1,7 @@
- var socket = io();
+// const io = require('socket.io-client');
+var socket = io();
+
+
 
 $(function() {
   // var socket = io.connect("http://localhost:8900");

@@ -79,8 +79,6 @@ app.post('/login', function(request, response, socket) {
 				response.writeHead(302, {
 					'Location': 'accueil.html'
           });
-           joinWaitingPlayers();
-
 				  response.end();
 						} else {
               response.send('Incorrect Username and/or Password!');
@@ -123,22 +121,6 @@ app.post('/register1', function(request, response) {
 // 	response.end();
 // });
 
-
-// connection.connect(function(err) {
-// 	if (err) throw err;
-// 	connection.query("SELECT * FROM friends WHERE id_a = ? or id_b = ?",[id, id], function (err, result, fields) {
-// 	  if (err) throw err;
-// 	  var j = result.length;
-// 	  let friends = [];
-// 	  for( i = 0; i<j; i++){
-// 		  if(result[i].id_a == 1)
-// 			  friends.push(result[i].id_b);
-// 		  else
-// 		  	friends.push(result[i].id_a);
-// 	  }
-// 	  	// console.log(friends);
-// 	});
-// });
 
 
 
@@ -197,7 +179,7 @@ io.on('connection', function(socket) {
 
   });
 
-  // joinWaitingPlayers();
+  joinWaitingPlayers();
 });
 
 //créé nouvelle partie si 2+ joueurs
