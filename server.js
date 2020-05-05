@@ -43,6 +43,13 @@ var connection = mysql.createConnection({
 	database : 'TRY1'
 });
 
+// var connection = mysql.createConnection({
+// 	host     : 'eu-cdbr-west-03.cleardb.net ',
+// 	user     : 'b54e502a6db30f',
+// 	password : '3086104a',
+// 	database : 'heroku_7269bdee4ccd6eb'
+// });
+
 app.use(session({
 	secret: 'secret',
 	resave: true,
