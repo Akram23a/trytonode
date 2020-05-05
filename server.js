@@ -13,7 +13,8 @@ var entities = new Entities();
 var BattleshipGame = require('./gameapp.js');
 var GameStatus = require('./game_status.js');
 
-var port = 8900;
+// var port = 8900;
+var port = process.env.port || 8900;
 
 var users = {};
 var usersFromDB = [];
