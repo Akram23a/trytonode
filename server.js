@@ -2,6 +2,10 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+
+// const bcrypt = require('bcryptjs')
+const bcrypt = require('bcrypt')
+
 var Entities = require('html-entities').AllHtmlEntities;
 var entities = new Entities();
 
@@ -65,64 +69,65 @@ app.get('/disconnect', function(request, response) {
 app.get('/register', function(request, response) {
   response.sendFile(__dirname +'/register.html');
 });
-app.post('/login', function(request, response, socket) {
+
+
+app.post('/login', function(request, response) {
+
 	var mail = request.body.email_cnx;
   var password = request.body.mdp_cnx;
-
 	if (mail && password) {
-		connection.query('SELECT * FROM player WHERE mail = ? AND password = ?', [mail, password], function(error, result, fields) {
-			if (result) {
-        usersFromDB.push(result)
-        request.session.loggedin = true;
-        console.log(result);
-        request.session.username = result[0].nickname;
-				response.writeHead(302, {
-					'Location': 'accueil.html'
+
+		connection.query('SELECT * FROM player WHERE mail = ?', mail, function(error, result, fields) {
+			if (result){
+
+        bcrypt.compare(password, result[0].password).then(function(istrue){
+          if(istrue=='true'){
+            usersFromDB.push(result)
+            request.session.loggedin = true;
+            console.log(result);
+            request.session.username = result[0].nickname;
+            response.writeHead(302, {
+              'Location': 'accueil.html'
+            });
+            response.end();
+            }
+         else {
+          response.writeHead(302, {
+            'Location': 'register.html'
           });
-				  response.end();
-						} else {
-              response.send('Incorrect Username and/or Password!');
-              response.writeHead(500, {
-                'Location': 'index.html'
-                });
-                
-        // console.log(result);
-			}			
-			response.end();
-		});
-	} else {
-		response.send('Please enter Username and Password!');
-		response.end();
-	}
-});
-
-app.post('/register1', function(request, response) {
-	var mail = request.body.email;
-  var password = request.body.password;
-  var nickname= request.body.fname + request.body.lname;
-	console.log("Registering!");
-	connection.query('INSERT INTO player (nickname, mail, password) VALUES (?, ?, ?)',[nickname, mail, password], function (err, result) {
-	  if (err) throw err;
-      {console.log("1 record inserted");
-      response.writeHead(302, {
-        'Location': 'login.html'
+          response.end();
+        }
       });
-      response.end();
     }
-	});
+      });
+
+  }
 
 });
-// app.get('/home', function(request, response) {
-// 	if (request.session.loggedin) {
-// 		response.send('Welcome back, ' + request.session.username + '!');
-// 	} else {
-// 		response.send('Please login to view this page!');
-// 	}
-// 	response.end();
-// });
+//REGISTER BCRYPT
 
+  app.post('/register1', function (request, response){
 
+    var mail = request.body.email;
+    var nickname= request.body.fname + request.body.lname;
+    
+    var password = request.body.password;
 
+    bcrypt.hash(password, 10, function(err, hash) {
+      console.log("Registering!");
+      connection.query('INSERT INTO player (nickname, mail, password) VALUES (?, ?, ?)',[nickname, mail, hash], function (err, result) {
+        if (err) throw err;
+          {
+            console.log("1 record inserted");
+          response.writeHead(302, {
+            'Location': 'login.html'
+          });
+          response.end();
+        }
+      });  });
+  
+    });
+ 
 
 //**************************************** LOGIN AND REGISTER  ****************************** */
 
