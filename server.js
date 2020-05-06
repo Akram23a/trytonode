@@ -61,9 +61,9 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
 
-app.get('/', function(request, response) {
-  response.sendFile(__dirname +'/index.html');
-});
+// app.get('/', function(request, response) {
+//   response.sendFile(__dirname +'/index.html');
+// });
 
 app.get('/login', function(request, response) {
   response.sendFile(__dirname +'/login.html');
