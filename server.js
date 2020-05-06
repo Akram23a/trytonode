@@ -78,40 +78,7 @@ app.get('/register', function(request, response) {
   response.sendFile(__dirname +'/register.html');
 });
 
-// BCRYPT func
-// app.post('/login', async(request, response) => {
-//   try{
-//     var mail = request.body.email_cnx;
-//     var password1 = request.body.mdp_cnx;
-//     let compare = false
-//     const newuser = await connection.query('SELECT * FROM player WHERE mail = ?', mail)
-//       compare = await bcrypt.compare(password1, newuser[0].password)
-//             if (compare) {
-//               usersFromDB.push(newuser)
-//               request.session.loggedin = true;
-//               console.log(newuser);
-//               request.session.username = newuser[0].nickname;
-//               response.writeHead(302, {
-//                 'Location': 'accueil.html'
-//                 });
-  
-//               } else {
-//                     response.send('Incorrect Username and/or Password!');
-//                     response.writeHead(500, {
-//                       'Location': 'index.html'
-//                       });
-  
-//           }  
-//           response.end();
 
-//   }catch{
-//     response.send('a problem occured');
-//     // response.writeHead(500, {
-//     //   'Location': 'index.html'
-//     //   });
-
-//   }
-// });
 
 app.post('/login', function(request, response) {
 
@@ -151,25 +118,7 @@ app.post('/login', function(request, response) {
 
 });
 //REGISTER BCRYPT
-  // app.post('/register1', async (request, response)=>{
 
-  //   var mail = request.body.email;
-  //   var nickname= request.body.fname + request.body.lname;
-    
-  //   var password = request.body.password;
-  //   let salt = await bcrypt.genSalt(10)
-  //     let hash1 = await bcrypt.hash(password, salt)
-  //     console.log("Registering!");
-  //     connection.query('INSERT INTO player (nickname, mail, password) VALUES (?, ?, ?)',[nickname, mail, hash1], function (err, result) {
-  //       if (err) throw err;
-  //         {console.log("1 record inserted");
-  //         response.writeHead(302, {
-  //           'Location': 'login.html'
-  //         });
-  //         response.end();
-  //       }
-  //     });
-  //   });
 
   app.post('/register1', function (request, response){
 
@@ -192,21 +141,6 @@ app.post('/login', function(request, response) {
       });  });
   
     });
-  // app.post('/register1', function(request, response) {
-  //   var mail = request.body.email;
-  //   var password = request.body.password;
-  //   var nickname= request.body.fname + request.body.lname;
-  //   console.log("Registering!");
-  //   connection.query('INSERT INTO player (nickname, mail, password) VALUES (?, ?, ?)',[nickname, mail, password], function (err, result) {
-  //     if (err) throw err;
-  //       {console.log("1 record inserted");
-  //       response.writeHead(302, {
-  //         'Location': 'login.html'
-  //       });
-  //       response.end();
-  //     }
-  //   });
-  // });
 
 //**************************************** LOGIN AND REGISTER  ****************************** */
 
