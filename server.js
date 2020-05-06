@@ -45,11 +45,7 @@ var path = require('path');
 // });
 
 var connection = mysql.createConnection({
-<<<<<<< HEAD:server.js
 	host     : 'eu-cdbr-west-03.cleardb.net',
-=======
-	host     : 'eu-cdbr-west-03.cleardb.net ',
->>>>>>> 029ec9efb7688ddceef0bd882caa4e0f3738ca5c:index.js
 	user     : 'b54e502a6db30f',
 	password : '3086104a',
 	database : 'heroku_7269bdee4ccd6eb'
